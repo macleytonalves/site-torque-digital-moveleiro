@@ -3,6 +3,7 @@ import { TruthBlock } from './sections/TruthBlock'
 import { Manifesto } from './sections/Manifesto'
 import { Method } from './sections/Method'
 import { SharedResponsibility } from './sections/SharedResponsibility'
+import { PartnershipModel } from './sections/PartnershipModel'
 import { Footer } from './sections/Footer'
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
       <Manifesto />
       <Method />
       <SharedResponsibility />
+      <PartnershipModel />
       <Footer />
     </main>
   )
