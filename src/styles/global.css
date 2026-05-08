@@ -6,9 +6,9 @@
 
 :root {
   color-scheme: dark;
-  --torque-navy: #003366;
-  --torque-orange: #FF6B00;
-  --torque-cream: #F8FBFF;
+  --torque-navy: #071B33;
+  --torque-orange: #FF6A00;
+  --torque-cream: #F5F0E8;
 }
 
 * {
@@ -24,27 +24,27 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background: #030B14;
-  color: #F8FBFF;
+  color: #F5F0E8;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   text-rendering: geometricPrecision;
 }
 
 body::selection {
-  background: rgba(255, 107, 0, 0.35);
+  background: rgba(255, 106, 0, 0.35);
 }
 
 .blueprint-grid {
   background-image:
-    linear-gradient(rgba(248, 251, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(248, 251, 255, 0.035) 1px, transparent 1px);
+    linear-gradient(rgba(245, 240, 232, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 240, 232, 0.035) 1px, transparent 1px);
   background-size: 44px 44px;
 }
 
 .blueprint-lines {
   background-image:
-    radial-gradient(circle at 18% 18%, rgba(255,107,0,0.16), transparent 22%),
-    linear-gradient(115deg, transparent 0%, transparent 46%, rgba(255,255,255,0.08) 46.2%, transparent 47%),
-    linear-gradient(25deg, transparent 0%, transparent 42%, rgba(255,107,0,0.09) 42.3%, transparent 43%);
+    radial-gradient(circle at 18% 18%, rgba(255,106,0,0.14), transparent 22%),
+    linear-gradient(115deg, transparent 0%, transparent 46%, rgba(255,255,255,0.07) 46.2%, transparent 47%),
+    linear-gradient(25deg, transparent 0%, transparent 42%, rgba(255,106,0,0.08) 42.3%, transparent 43%);
 }
 
 .glass-card {
@@ -55,7 +55,7 @@ body::selection {
 }
 
 .chalk-line {
-  filter: drop-shadow(0 0 18px rgba(248, 251, 255, 0.16));
+  filter: drop-shadow(0 0 18px rgba(245, 240, 232, 0.16));
 }
 
 .noise-mask::after {
