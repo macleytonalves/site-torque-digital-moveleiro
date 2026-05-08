@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://torquedigital.com.br/sitemap.xml
