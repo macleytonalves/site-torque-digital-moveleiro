@@ -17,6 +17,16 @@ function WhatsAppIcon() {
   )
 }
 
+function InstagramIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="2" />
+      <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
+      <circle cx="17.5" cy="6.5" r="1.3" fill="currentColor" />
+    </svg>
+  )
+}
+
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-torque-dark px-6 py-12 lg:px-10">
@@ -30,9 +40,6 @@ export function Footer() {
           </p>
         </div>
         <div className="flex flex-col items-start gap-4 text-sm text-white/65 md:items-end md:text-right">
-          <a className="font-semibold transition hover:text-white" href={siteConfig.instagram} target="_blank" rel="noreferrer">
-            Instagram
-          </a>
           <motion.a
             href={siteConfig.whatsappUrl}
             whileHover={{ scale: 1.04, y: -2 }}
@@ -46,10 +53,21 @@ export function Footer() {
             >
               <WhatsAppIcon />
             </motion.span>
-            <span className="flex flex-col leading-tight">
-              <span>Quero agendar uma reunião</span>
-              <span className="text-xs font-semibold text-white/75">WhatsApp: 91 98407-0470</span>
+            <span>Quero agendar uma reunião</span>
+          </motion.a>
+
+          <motion.a
+            href={siteConfig.instagram}
+            target="_blank"
+            rel="noreferrer"
+            whileHover={{ scale: 1.03, y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/8 px-5 py-3 font-bold text-white/82 transition hover:border-torque-orange/40 hover:bg-white/12 hover:text-white"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-torque-orange">
+              <InstagramIcon />
             </span>
+            <span>Instagram</span>
           </motion.a>
         </div>
       </div>
