@@ -1,36 +1,12 @@
 import { motion } from 'framer-motion'
 
 const decisions = [
-  {
-    title: 'Entrou',
-    text: 'O contato chegou pela campanha.',
-    signal: 'Lead bruto'
-  },
-  {
-    title: 'Decidiu responder',
-    text: 'Mostrou abertura mínima para conversa.',
-    signal: 'Primeiro sinal'
-  },
-  {
-    title: 'Revelou contexto',
-    text: 'Informou momento, ambiente, imóvel ou intenção.',
-    signal: 'Contexto real'
-  },
-  {
-    title: 'Investiu tempo',
-    text: 'Aceitou conversar, enviar medidas ou agendar.',
-    signal: 'Compromisso'
-  },
-  {
-    title: 'Comparou',
-    text: 'Entrou em fase ativa de escolha.',
-    signal: 'Decisão próxima'
-  },
-  {
-    title: 'Fechou',
-    text: 'Virou contrato na mão do seu time.',
-    signal: 'Venda'
-  }
+  { title: 'Entrou', text: 'O contato chegou pela campanha.', signal: 'Lead bruto', x: '7%', y: '78%' },
+  { title: 'Respondeu', text: 'Mostrou abertura real para conversa.', signal: 'Primeiro sinal', x: '23%', y: '64%' },
+  { title: 'Revelou contexto', text: 'Informou imóvel, ambiente, momento ou intenção.', signal: 'Contexto real', x: '40%', y: '51%' },
+  { title: 'Investiu tempo', text: 'Aceitou conversar, enviar medidas ou agendar.', signal: 'Compromisso', x: '58%', y: '36%' },
+  { title: 'Comparou', text: 'Entrou em fase ativa de escolha.', signal: 'Decisão próxima', x: '75%', y: '22%' },
+  { title: 'Fechou', text: 'Virou contrato na mão do seu time.', signal: 'Venda', x: '91%', y: '10%' }
 ]
 
 export function Method() {
@@ -38,51 +14,80 @@ export function Method() {
     <section id="metodo" className="relative overflow-hidden bg-torque-dark px-6 py-28 lg:px-10">
       <div className="absolute inset-0 blueprint-grid opacity-50" />
       <div className="absolute left-1/2 top-24 h-72 w-72 -translate-x-1/2 rounded-full bg-torque-orange/10 blur-3xl" />
+      <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-torque-navy/40 to-transparent" />
 
       <div className="relative mx-auto max-w-7xl">
-        <div className="max-w-4xl">
-          <p className="text-sm font-bold uppercase tracking-[0.24em] text-torque-orange">Método Torque</p>
-          <h2 className="mt-4 text-4xl font-black leading-tight tracking-[-0.05em] text-white md:text-6xl lg:text-7xl">
-            A Torque não mede só tarefas. Mede decisões.
-          </h2>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-torque-slate">
-            No mercado de planejados, o funil não anda porque uma tarefa foi feita. O funil anda quando o cliente assume uma nova decisão.
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.24em] text-torque-orange">Método Torque</p>
+            <h2 className="mt-4 font-display text-4xl font-black leading-tight tracking-[-0.05em] text-white md:text-6xl lg:text-7xl">
+              A Torque não mede só tarefas. Mede decisões.
+            </h2>
+          </div>
+          <p className="max-w-2xl text-lg leading-8 text-torque-slate">
+            No mercado de planejados, a venda não sobe porque alguém cumpriu uma tarefa. Ela sobe quando o cliente assume uma nova decisão — e cada decisão precisa ser lida, priorizada e conduzida.
           </p>
         </div>
 
-        <div className="relative mt-20 hidden lg:block">
-          <div className="absolute left-10 right-10 top-[82px] h-[2px] bg-gradient-to-r from-torque-orange via-white/35 to-torque-orange" />
+        <div className="relative mt-20 hidden min-h-[560px] overflow-hidden rounded-[2.2rem] border border-white/10 bg-gradient-to-br from-white/7 to-white/[0.025] p-10 shadow-card lg:block">
+          <div className="absolute inset-0 blueprint-lines opacity-70" />
+          <div className="absolute bottom-0 left-0 right-0 h-[240px] bg-gradient-to-t from-torque-navy/70 to-transparent" />
+
+          <svg className="absolute inset-0 h-full w-full" viewBox="0 0 1200 560" fill="none" preserveAspectRatio="none">
+            <motion.path
+              d="M70 430 C190 390 230 335 330 325 C450 312 480 250 590 238 C720 224 740 150 870 140 C990 130 1020 78 1130 65"
+              stroke="rgba(255,106,0,0.95)"
+              strokeWidth="5"
+              strokeLinecap="round"
+              strokeDasharray="14 16"
+              initial={{ pathLength: 0 }}
+              whileInView={{ pathLength: 1 }}
+              viewport={{ once: true, amount: 0.35 }}
+              transition={{ duration: 1.7, ease: 'easeInOut' }}
+            />
+            <motion.path
+              d="M70 455 L260 375 L410 394 L620 270 L820 300 L1130 85 L1130 560 L70 560 Z"
+              fill="rgba(255,255,255,0.035)"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.35 }}
+              transition={{ duration: 1.2, delay: 0.4 }}
+            />
+          </svg>
+
           <motion.div
-            className="absolute left-10 top-[78px] h-[10px] w-[10px] rounded-full bg-white shadow-[0_0_24px_rgba(255,255,255,0.9)]"
-            animate={{ x: [0, 1040, 0] }}
-            transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
+            className="absolute h-5 w-5 rounded-full bg-white shadow-[0_0_28px_rgba(255,255,255,0.95)]"
+            style={{ left: '5.5%', top: '76%' }}
+            animate={{
+              left: ['5.5%', '21.5%', '38.5%', '56.5%', '73.5%', '89.5%', '5.5%'],
+              top: ['76%', '62%', '49%', '34%', '20%', '8%', '76%']
+            }}
+            transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
           />
 
-          <div className="grid grid-cols-6 gap-4">
-            {decisions.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.4 }}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
-                className="relative"
-              >
-                <div className="mx-auto mb-7 flex h-16 w-16 items-center justify-center rounded-3xl border border-torque-orange/50 bg-torque-orange text-2xl font-black text-white shadow-glow">
-                  {index + 1}
-                </div>
-                <div className="glass-card min-h-[210px] rounded-[1.6rem] p-5">
-                  <p className="mb-3 inline-flex rounded-full bg-white/8 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-torque-orange2">
-                    {item.signal}
-                  </p>
-                  <h3 className="text-xl font-black leading-tight text-white">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-torque-slate">{item.text}</p>
-                </div>
-                {index < decisions.length - 1 && (
-                  <div className="absolute right-[-21px] top-[70px] z-10 text-3xl font-black text-torque-orange">›</div>
-                )}
-              </motion.div>
-            ))}
+          {decisions.map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 26, scale: 0.96 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, amount: 0.35 }}
+              transition={{ duration: 0.55, delay: index * 0.09 }}
+              className="absolute w-[184px]"
+              style={{ left: item.x, top: item.y, transform: 'translate(-50%, -50%)' }}
+            >
+              <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-2xl border border-torque-orange/50 bg-torque-orange text-xl font-black text-white shadow-glow">
+                {index + 1}
+              </div>
+              <div className="glass-card rounded-[1.45rem] p-4">
+                <p className="text-[10px] font-black uppercase tracking-[0.18em] text-torque-orange2">{item.signal}</p>
+                <h3 className="mt-3 text-lg font-black leading-tight text-white">{item.title}</h3>
+                <p className="mt-2 text-xs leading-5 text-torque-slate">{item.text}</p>
+              </div>
+            </motion.div>
+          ))}
+
+          <div className="absolute bottom-8 left-10 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-bold text-white/70">
+            A subida não é de tarefas. É de decisões do cliente.
           </div>
         </div>
 
