@@ -1,4 +1,5 @@
 import { Hero } from './sections/Hero'
+import { TruthBlock } from './sections/TruthBlock'
 import { Manifesto } from './sections/Manifesto'
 import { Method } from './sections/Method'
 import { SharedResponsibility } from './sections/SharedResponsibility'
@@ -8,6 +9,7 @@ export default function App() {
   return (
     <main>
       <Hero />
+      <TruthBlock />
       <Manifesto />
       <Method />
       <SharedResponsibility />
